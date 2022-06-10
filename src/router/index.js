@@ -12,6 +12,14 @@ const routes = [
     path: '/onlineMarketing',
     component: () => import('../views/onlineMarketing.vue')
   },
+  {
+    path: '/offlineMarketing',
+    component: () => import('../views/offlineMarketing.vue')
+  },
+  {
+    path: '/brandMarketing',
+    component: () => import('../views/brandMarketing.vue')
+  },
 ]
 
 const router = new VueRouter({

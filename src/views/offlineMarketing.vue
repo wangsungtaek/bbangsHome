@@ -5,8 +5,8 @@ export default {
   components: {
   },
   created() {
-    for (let i = 0; i < 7; i++) {
-      this.imageList[i] = require(`@/assets/images/onlineMarketing/onlineMarketing_${i+2}.jpg`);
+    for (let i = 0; i < 2; i++) {
+      this.imageList[i] = require(`@/assets/images/offlineMarketing/offlineMarketing_${i+1}.jpg`);
     }
   },
   data() {
@@ -26,7 +26,7 @@ export default {
         class="hero-8 bg-center position-relative"
         :style="{
           'background-image':
-            'url(' + require('@/assets/images/onlineMarketing/onlineMarketing_0.jpg') + ')',
+            'url(' + require('@/assets/images/offlineMarketing/offlineMarketing_0.jpg') + ')',
         }"
         id="onlineMarketingSection"
       >

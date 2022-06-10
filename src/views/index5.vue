@@ -1,26 +1,22 @@
 <script>
 import { PlayIcon } from "vue-feather-icons";
 
-import Navbar from "@/components/navbar";
 import Services from "@/components/services";
 import Features from "@/components/features";
 import Pricing from "@/components/pricing";
 import Team from "@/components/team";
 import Blog from "@/components/blog";
 import Contact from "@/components/contact";
-import Footer from "@/components/footer";
 
 export default {
   components: {
     PlayIcon,
-    Navbar,
     Services,
     Features,
     Pricing,
     Team,
     Blog,
     Contact,
-    Footer,
   },
   data() {
     return {};

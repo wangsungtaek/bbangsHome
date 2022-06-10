@@ -128,10 +128,13 @@ export default {
             >
               <ul>
                 <li>
-                  <a href="/onlineMarketing" class="dropItem">Online Marketing</a>
+                  <router-link to="/onlineMarketing" class="dropItem">Online Marketing</router-link>
                 </li>
                 <li class="mt-2">
-                  <a href="#" class="dropItem">Offline Marketing</a>
+                  <router-link to="/offlineMarketing" class="dropItem">Offline Marketing</router-link>
+                </li>
+                <li class="mt-2">
+                  <router-link to="/brandMarketing" class="dropItem">Brand Marketing</router-link>
                 </li>
               </ul>
             </b-nav-item-dropdown>

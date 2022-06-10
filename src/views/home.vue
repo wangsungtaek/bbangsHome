@@ -1,31 +1,3 @@
-<script>
-import { StarIcon } from "vue-feather-icons";
-
-import Navbar from "@/components/navbar";
-import Business from "@/components/business";
-import Video from "@/components/video";
-import Strong from "@/components/strong";
-import Collaborate from "@/components/collaborate";
-import Contact from "@/components/contact";
-import Footer from "@/components/footer";
-
-export default {
-  components: {
-    StarIcon,
-    Navbar,
-    Business,
-    Video,
-    Strong,
-    Collaborate,
-    Contact,
-    Footer,
-  },
-  data() {
-    return {};
-  },
-};
-</script>
-
 <template>
   <div>
     <Navbar />
@@ -69,6 +41,7 @@ export default {
       <Business />
       <Video />
       <Strong />
+      <ImageSlider />
       <Collaborate />
       <Contact />
       <Footer />
@@ -76,6 +49,33 @@ export default {
   </div>
 </template>
 
+<script>
+import { StarIcon } from "vue-feather-icons";
+
+import Business from "@/components/business";
+import Video from "@/components/video";
+import Strong from "@/components/strong";
+import Collaborate from "@/components/collaborate";
+import Contact from "@/components/contact";
+import ImageSlider from '@/components/imageSlider';
+
+
+export default {
+  components: {
+    StarIcon,
+    Business,
+    Video,
+    Strong,
+    ImageSlider,
+    Collaborate,
+    Contact,
+
+  },
+  data() {
+    return {};
+  },
+};
+</script>
 
 <style scoped>
 .particles-effect {
