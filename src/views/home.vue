@@ -30,7 +30,6 @@ export default {
   <div>
     <Navbar />
     <div v-scroll-spy>
-      <!-- Hero Start -->
       <section
         class="hero-8 bg-center position-relative"
         :style="{
@@ -66,7 +65,6 @@ export default {
           :particleSize="4"
         ></vue-particles>
       </section>
-      <!-- Hero End -->
 
       <Business />
       <Video />

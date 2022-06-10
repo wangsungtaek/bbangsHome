@@ -75,8 +75,7 @@ export default {
         >
           <li class="nav-item">
             <a
-              v-scroll-to="'#home'"
-              href="javascript: void(0);"
+              href="/"
               class="nav-link"
               >Home</a
             >
