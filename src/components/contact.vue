@@ -3,13 +3,12 @@ import {
   MailIcon,
   PhoneIcon,
   FacebookIcon,
-  TwitterIcon,
   InstagramIcon,
-  MapPinIcon
+  MapPinIcon,
 } from "vue-feather-icons";
 
 export default {
-  components: { MailIcon, PhoneIcon, FacebookIcon, TwitterIcon, InstagramIcon,MapPinIcon },
+  components: { MailIcon, PhoneIcon, FacebookIcon,  InstagramIcon, MapPinIcon },
   data() {
     return {};
   },
@@ -107,7 +106,7 @@ export default {
             </p>
             <p class="text-muted mb-3">
               <phone-icon class="me-2 text-muted icon icon-xs"></phone-icon>
-              +91 123 4556 789
+              070 - 7724 - 2657
             </p>
             <p class="text-muted mb-3">
               <map-pin-icon
@@ -127,7 +126,7 @@ export default {
                 <a
                   href="javascript: void(0);"
                   class="social-icon icon-mono avatar-xs rounded-circle"
-                  ><twitter-icon class="icon-xs"></twitter-icon
+                  ><instagram-icon class="icon-xs"></instagram-icon
                 ></a>
               </li>
               <li class="list-inline-item">

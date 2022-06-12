@@ -1,11 +1,3 @@
-<script>
-export default {
-  data() {
-    return {};
-  },
-};
-</script>
-
 <template>
   <!-- Footer Start -->
   <footer
@@ -37,91 +29,31 @@ export default {
 
         <div class="col-lg-6 ms-lg-auto">
           <div class="row">
-            <div class="col-lg-4">
+
+            <div class="col-lg-3" @click="move('/brandMarketing')">
               <div class="mt-4 mt-lg-0">
-                <h4 class="text-white font-size-18 mb-3">온라인 마케팅</h4>
-                <ul class="list-unstyled footer-sub-menu">
-                  <!-- <li>
-                    <a href="javascript: void(0);" class="footer-link">Works</a>
-                  </li>
-                  <li>
-                    <a href="javascript: void(0);" class="footer-link"
-                      >Strategy</a
-                    >
-                  </li>
-                  <li>
-                    <a href="javascript: void(0);" class="footer-link"
-                      >Releases</a
-                    >
-                  </li>
-                  <li>
-                    <a href="javascript: void(0);" class="footer-link">Press</a>
-                  </li>
-                  <li>
-                    <a href="javascript: void(0);" class="footer-link"
-                      >Mission</a
-                    >
-                  </li> -->
-                </ul>
+                <h4 class="text-white font-size-18 mb-3">브랜드 마케팅</h4>
               </div>
             </div>
-            <div class="col-lg-4">
+
+            <div class="col-lg-3" @click="move('/offlineMarketing')">
               <div class="mt-4 mt-lg-0">
                 <h4 class="text-white font-size-18 mb-3">오프라인 마케팅</h4>
-                <ul class="list-unstyled footer-sub-menu">
-                  <!-- <li>
-                    <a href="javascript: void(0);" class="footer-link"
-                      >Trending</a
-                    >
-                  </li>
-                  <li>
-                    <a href="javascript: void(0);" class="footer-link"
-                      >Popular</a
-                    >
-                  </li>
-                  <li>
-                    <a href="javascript: void(0);" class="footer-link"
-                      >Customers</a
-                    >
-                  </li>
-                  <li>
-                    <a href="javascript: void(0);" class="footer-link"
-                      >Features</a
-                    >
-                  </li> -->
-                </ul>
               </div>
             </div>
-            <div class="col-lg-4">
+
+            <div class="col-lg-3" @click="move('/onlineMarketing')">
+              <div class="mt-4 mt-lg-0">
+                <h4 class="text-white font-size-18 mb-3">온라인 마케팅</h4>
+              </div>
+            </div>
+
+            <div class="col-lg-3" @click="move('/')" v-scroll-to="'#example'">
               <div class="mt-4 mt-lg-0">
                 <h4 class="text-white font-size-18 mb-3">사례</h4>
-                <ul class="list-unstyled footer-sub-menu">
-                  <!-- <li>
-                    <a href="javascript: void(0);" class="footer-link"
-                      >Developers</a
-                    >
-                  </li>
-                  <li>
-                    <a href="javascript: void(0);" class="footer-link"
-                      >Support</a
-                    >
-                  </li>
-                  <li>
-                    <a href="javascript: void(0);" class="footer-link"
-                      >Customer Service</a
-                    >
-                  </li>
-                  <li>
-                    <a href="javascript: void(0);" class="footer-link"
-                      >Get Started</a
-                    >
-                  </li>
-                  <li>
-                    <a href="javascript: void(0);" class="footer-link">Guide</a>
-                  </li> -->
-                </ul>
               </div>
             </div>
+
           </div>
         </div>
         <!-- end col -->
@@ -145,3 +77,16 @@ export default {
   </footer>
   <!-- Footer End -->
 </template>
+
+<script>
+export default {
+  data() {
+    return {};
+  },
+  methods: {
+    move(to) {
+      this.$router.push(to);
+    }
+  }
+};
+</script>

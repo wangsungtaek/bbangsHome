@@ -1,3 +1,82 @@
+<template>
+  <!--Navbar Start-->
+  <nav class="navbar navbar-expand-lg fixed-top" id="navbar" :class="{'navbar-light': navcolor === 'light', 'navbar-light bg-white' : navcolor === 'light-white'}">
+    <div class="container">
+      <!-- LOGO -->
+      <router-link class="navbar-brand logo" to="/">
+        <img
+          src="@/assets/images/logo.png"
+          alt=""
+          class="logo-light"
+          height="28"
+        />
+      </router-link>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarCollapse"
+        aria-controls="navbarCollapse"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        @click="toggleMenu()"
+      >
+        <menu-icon class=""></menu-icon>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul
+          class="navbar-nav ms-auto navbar-center"
+          id="navbar-navlist"
+          v-scroll-spy-active="{
+            selector: 'li a.nav-link',
+            class: 'active',
+          }"
+        >
+          <li class="list-inline-item" @click="move('/')">
+            <b-nav-item-dropdown text="Home" toggle-class="nav-link-custom" >
+              <ul>
+                <li>
+                  <a href="javascript: void(0);" class="dropItem nav-link" v-scroll-to="'#business'">Business</a>
+                </li>
+                <li class="mt-2">
+                  <a href="javascript: void(0);" class="dropItem nav-link" v-scroll-to="'#interview'">Interview</a>
+                </li>
+                <li class="mt-2">
+                  <a href="javascript: void(0);" class="dropItem nav-link" v-scroll-to="'#strongPoint'">Strong Point</a>
+                </li>
+                <li class="mt-2">
+                  <a href="javascript: void(0);" class="dropItem nav-link" v-scroll-to="'#example'">Example</a>
+                </li>
+                <li class="mt-2">
+                  <a href="javascript: void(0);" class="dropItem nav-link" v-scroll-to="'#partners'">Partners</a>
+                </li>
+              </ul>
+            </b-nav-item-dropdown>
+          </li>
+
+          <li class="nav-item">
+            <router-link to="/brandMarketing" class="nav-link">Brand Marketing</router-link>
+          </li>
+
+          <li class="nav-item">
+            <router-link to="/offlineMarketing" class="nav-link">Offline Marketing</router-link>
+          </li>
+
+          <li class="nav-item">
+            <router-link to="/onlineMarketing" class="nav-link">Online Marketing</router-link>
+          </li>
+
+          <li class="nav-item">
+            <a href="/#contact" class="nav-link">Contact</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+    <!-- end container -->
+  </nav>
+  <!-- Navbar End -->
+</template>
 <script>
 import { MenuIcon } from "vue-feather-icons";
 
@@ -35,117 +114,15 @@ export default {
     toggleMenu() {
       document.getElementById("navbarCollapse").classList.toggle("show");
     },
+    move(to) {
+      console.log(to);
+      this.$router.push(to);
+    }
   },
 };
 </script>
 
-<template>
-  <!--Navbar Start-->
-  <nav class="navbar navbar-expand-lg fixed-top" id="navbar" :class="{'navbar-light': navcolor === 'light', 'navbar-light bg-white' : navcolor === 'light-white'}">
-    <div class="container">
-      <!-- LOGO -->
-      <router-link class="navbar-brand logo" to="/">
-        <img
-          src="@/assets/images/logo.png"
-          alt=""
-          class="logo-light"
-          height="28"
-        />
-      </router-link>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarCollapse"
-        aria-controls="navbarCollapse"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-        @click="toggleMenu()"
-      >
-        <menu-icon class=""></menu-icon>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul
-          class="navbar-nav ms-auto navbar-center"
-          id="navbar-navlist"
-          v-scroll-spy-active="{
-            selector: 'li a.nav-link',
-            class: 'active',
-          }"
-        >
-          <li class="nav-item">
-            <a
-              href="/"
-              class="nav-link"
-              >Home</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              v-scroll-to="'#business'"
-              href="javascript: void(0);"
-              class="nav-link"
-              >Business</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              v-scroll-to="'#interview'"
-              href="javascript: void(0);"
-              class="nav-link"
-              >Interview</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              v-scroll-to="'#strongPoint'"
-              href="javascript: void(0);"
-              class="nav-link"
-              >Strong Point</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              v-scroll-to="'#partners'"
-              href="javascript: void(0);"
-              class="nav-link"
-              >Partners</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              v-scroll-to="'#contact'"
-              href="javascript: void(0);"
-              class="nav-link"
-              >Contact</a
-            >
-          </li>
-          <li class="list-inline-item">
-            <b-nav-item-dropdown
-              id="my-nav-dropdown"
-              text="Marketing"
-              toggle-class="nav-link-custom"
-            >
-              <ul>
-                <li>
-                  <router-link to="/onlineMarketing" class="dropItem">Online Marketing</router-link>
-                </li>
-                <li class="mt-2">
-                  <router-link to="/offlineMarketing" class="dropItem">Offline Marketing</router-link>
-                </li>
-                <li class="mt-2">
-                  <router-link to="/brandMarketing" class="dropItem">Brand Marketing</router-link>
-                </li>
-              </ul>
-            </b-nav-item-dropdown>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <!-- end container -->
-  </nav>
-  <!-- Navbar End -->
-</template>
+
 <style scoped>
 ul {
   padding: 5px;

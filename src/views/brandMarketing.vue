@@ -28,7 +28,7 @@ export default {
           'background-image':
             'url(' + require('@/assets/images/brandMarketing/brandMarketing_0.jpg') + ')',
         }"
-        id="onlineMarketingSection"
+        id="brandMarketing"
       >
         <div class="bg-overlay bg-dark"></div>
         <vue-particles
@@ -55,7 +55,7 @@ export default {
 
 
 <style lang="scss" scoped>
-#onlineMarketing {
+#brandMarketing {
   .particles-effect {
     width: 100%;
     height: 100%;

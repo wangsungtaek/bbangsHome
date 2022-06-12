@@ -1,5 +1,5 @@
 <template>
-  <section class="section bg-light" id="imageSlide">
+  <section class="section bg-light" id="example">
         <div class="row justify-content-center">
           <div class="col-lg-12 text-center">
             <h2 class="fw-bold">Example</h2>
@@ -46,7 +46,3 @@ export default {
   }
 }
 </script>
-
-<style lang="sass" scoped>
-
-</style>

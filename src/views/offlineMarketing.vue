@@ -19,7 +19,7 @@ export default {
 </script>
 
 <template>
-  <div id="onlineMarketing">
+  <div id="offlineMarketing">
     <Navbar />
     <div v-scroll-spy>
       <section
@@ -28,7 +28,7 @@ export default {
           'background-image':
             'url(' + require('@/assets/images/offlineMarketing/offlineMarketing_0.jpg') + ')',
         }"
-        id="onlineMarketingSection"
+        id="offlineMarketingSection"
       >
         <div class="bg-overlay bg-dark"></div>
         <vue-particles
@@ -55,7 +55,7 @@ export default {
 
 
 <style lang="scss" scoped>
-#onlineMarketing {
+#offlineMarketing {
   .particles-effect {
     width: 100%;
     height: 100%;

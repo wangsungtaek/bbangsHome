@@ -1,14 +1,3 @@
-<script>
-import { BoxIcon, LayersIcon, ServerIcon } from "vue-feather-icons";
-
-export default {
-  components: { BoxIcon, LayersIcon, ServerIcon },
-  data() {
-    return {};
-  },
-};
-</script>
-
 <template>
   <!-- Services start -->
   <section class="section" id="business">
@@ -24,7 +13,7 @@ export default {
 
       <!-- 브랜딩 -->
       <div class="row">
-        <div class="col-lg-4" data-aos="zoom-in">
+        <div class="col-lg-4" data-aos="zoom-in" @click="move('/brandMarketing')">
           <div class="service-box text-center px-4 py-5 position-relative mb-4 active">
             <div class="service-box-content p-4">
               <div class="icon-mono service-icon avatar-md mx-auto mb-4">
@@ -39,7 +28,7 @@ export default {
         </div>
         
         <!-- 인플루언서 -->
-        <div class="col-lg-4" data-aos="zoom-in">
+        <div class="col-lg-4" data-aos="zoom-in" @click="move('/onlineMarketing')">
           <div class="service-box text-center px-4 py-5 position-relative mb-4">
             <div class="service-box-content p-4">
               <div class="icon-mono service-icon avatar-md mx-auto mb-4">
@@ -54,7 +43,7 @@ export default {
         </div>
 
         <!-- 플랫폼 -->
-        <div class="col-lg-4" data-aos="zoom-in">
+        <div class="col-lg-4" data-aos="zoom-in" @click="move('/onlineMarketing')">
           <div class="service-box text-center px-4 py-5 position-relative mb-4 active">
             <div class="service-box-content p-4">
               <div class="icon-mono service-icon avatar-md mx-auto mb-4">
@@ -69,7 +58,7 @@ export default {
         </div>
 
         <!-- 인터랙티브 -->
-        <div class="col-lg-4" data-aos="zoom-in">
+        <div class="col-lg-4" data-aos="zoom-in" @click="move('/offlineMarketing')">
           <div class="service-box text-center px-4 py-5 position-relative mb-4">
             <div class="service-box-content p-4">
               <div class="icon-mono service-icon avatar-md mx-auto mb-4">
@@ -84,7 +73,7 @@ export default {
         </div>
 
         <!-- 온라인 마켓팅 -->
-        <div class="col-lg-4" data-aos="zoom-in">
+        <div class="col-lg-4" data-aos="zoom-in" @click="move('/onlineMarketing')">
           <div class="service-box text-center px-4 py-5 position-relative mb-4 active">
             <div class="service-box-content p-4">
               <div class="icon-mono service-icon avatar-md mx-auto mb-4">
@@ -105,3 +94,19 @@ export default {
   </section>
   <!-- Services end -->
 </template>
+
+<script>
+import { BoxIcon, LayersIcon, ServerIcon } from "vue-feather-icons";
+
+export default {
+  components: { BoxIcon, LayersIcon, ServerIcon },
+  data() {
+    return {};
+  },
+  methods: {
+    move(to) {
+      this.$router.push(to)
+    }
+  }
+};
+</script>
