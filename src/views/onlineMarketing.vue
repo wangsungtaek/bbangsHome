@@ -40,11 +40,9 @@ export default {
       </section>
 
       <!-- Content -->
-      <div class="container">
-        <div class="row justify-content-center" v-for="imgPath in imageList" :key="imgPath" data-aos="zoom-in">
-          <div class="col-lg-12">
-            <img :src="imgPath" class="img-fluid d-block ms-auto rounded shadow" />
-          </div>
+      <div class="row justify-content-center" v-for="imgPath in imageList" :key="imgPath" data-aos="zoom-in">
+        <div class="col-lg-12">
+          <img :src="imgPath" class="img-fluid d-block ms-auto rounded shadow" />
         </div>
       </div>
 

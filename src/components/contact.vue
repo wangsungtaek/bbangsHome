@@ -1,20 +1,3 @@
-<script>
-import {
-  MailIcon,
-  PhoneIcon,
-  FacebookIcon,
-  InstagramIcon,
-  MapPinIcon,
-} from "vue-feather-icons";
-
-export default {
-  components: { MailIcon, PhoneIcon, FacebookIcon,  InstagramIcon, MapPinIcon },
-  data() {
-    return {};
-  },
-};
-</script>
-
 <template>
   <!-- Contact us start -->
   <section class="section" id="contact">
@@ -117,24 +100,21 @@ export default {
             <ul class="list-inline pt-4">
               <li class="list-inline-item me-3">
                 <a
-                  href="javascript: void(0);"
-                  class="social-icon icon-mono avatar-xs rounded-circle"
-                  ><facebook-icon class="icon-xs"></facebook-icon
-                ></a>
+                  href="https://blog.naver.com/PostList.naver?blogId=bbangs_blog"
+                  ><img src="@/assets/images/blog.png" style="width: 50px; "/>
+                </a>
               </li>
               <li class="list-inline-item me-3">
                 <a
-                  href="javascript: void(0);"
-                  class="social-icon icon-mono avatar-xs rounded-circle"
-                  ><instagram-icon class="icon-xs"></instagram-icon
-                ></a>
+                  href="http://pf.kakao.com/_JdNbxb"
+                  ><img src="@/assets/images/kakao.png" style="width: 45px; border-radius: 20px;"/>
+                </a>
               </li>
               <li class="list-inline-item">
                 <a
-                  href="javascript: void(0);"
-                  class="social-icon icon-mono avatar-xs rounded-circle"
-                  ><instagram-icon class="icon-xs"></instagram-icon
-                ></a>
+                  href="https://instagram.com/bbangs_company"
+                  ><img src="@/assets/images/insta.png" style="width: 43px;"/>
+                </a>
               </li>
             </ul>
           </div>
@@ -147,3 +127,17 @@ export default {
   </section>
   <!-- Contact us end -->
 </template>
+<script>
+import {
+  MailIcon,
+  PhoneIcon,
+  MapPinIcon,
+} from "vue-feather-icons";
+
+export default {
+  components: { MailIcon, PhoneIcon, MapPinIcon },
+  data() {
+    return {};
+  },
+};
+</script>
