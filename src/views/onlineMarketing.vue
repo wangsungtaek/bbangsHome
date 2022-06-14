@@ -5,7 +5,7 @@ export default {
   components: {
   },
   created() {
-    for (let i = 0; i < 7; i++) {
+    for (let i = 0; i < 9; i++) {
       this.imageList[i] = require(`@/assets/images/onlineMarketing/onlineMarketing_${i+2}.jpg`);
     }
   },
@@ -59,6 +59,9 @@ export default {
     height: 100%;
     position: absolute;
     top: 0px;
+  }
+  img {
+    width: 100%;
   }
 }
 </style>

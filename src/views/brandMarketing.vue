@@ -5,7 +5,7 @@ export default {
   components: {
   },
   created() {
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 5; i++) {
       this.imageList[i] = require(`@/assets/images/brandMarketing/brandMarketing_${i+1}.jpg`);
     }
   },
@@ -42,7 +42,7 @@ export default {
       <!-- Content -->
       <div class="row justify-content-center" v-for="imgPath in imageList" :key="imgPath" data-aos="zoom-in">
         <div class="col-lg-12">
-          <img :src="imgPath" class="img-fluid d-block ms-auto rounded shadow" />
+          <img :src="imgPath" class="img-fluid d-block ms-auto rounded shadow" style="width: 100%;" />
         </div>
       </div>
 
@@ -59,6 +59,9 @@ export default {
     height: 100%;
     position: absolute;
     top: 0px;
+  }
+  img {
+    width: 100%;
   }
 }
 </style>

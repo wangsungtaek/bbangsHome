@@ -60,5 +60,8 @@ export default {
     position: absolute;
     top: 0px;
   }
+  img {
+    width: 100%;
+  }
 }
 </style>
