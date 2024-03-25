@@ -1,6 +1,6 @@
 <template>
   <!-- Contact us start -->
-  <section class="section" id="contact">
+  <section class="section" id="contact"  data-aos="zoom-in">
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
@@ -79,13 +79,13 @@
         <div class="col-lg-5 ms-lg-auto">
           <div class="mt-5 mt-lg-0">
             <img
-              src="@/assets/images/contact.png"
+              src="@/assets/images/home/contact.png"
               alt=""
               class="img-fluid d-block"
             />
             <p class="text-muted mt-5 mb-3">
               <mail-icon class="me-2 text-muted icon icon-xs"></mail-icon>
-              bbangs_blog@naver.com
+              카카오톡 플러스 친구 "빵스컴퍼니" 검색
             </p>
             <p class="text-muted mb-3">
               <phone-icon class="me-2 text-muted icon icon-xs"></phone-icon>
@@ -95,7 +95,7 @@
               <map-pin-icon
                 class="me-2 text-muted icon icon-xs"
               ></map-pin-icon>
-              경기도 광명시 일직로 72 광명국제무역센터 c동 812호
+              경기도 안양시 안양로111
             </p>
             <ul class="list-inline pt-4">
               <li class="list-inline-item me-3">

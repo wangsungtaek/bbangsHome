@@ -3,22 +3,43 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
+
 const routes = [
   {
     path: '/',
-    component: () => import('../views/home.vue')
+    component: () => import('../views/home2.vue')
   },
   {
-    path: '/onlineMarketing',
-    component: () => import('../views/onlineMarketing.vue')
+    path: '/home',
+    component: () => import('../views/home2.vue')
   },
   {
-    path: '/offlineMarketing',
-    component: () => import('../views/offlineMarketing.vue')
+    path: '/about',
+    component: () => import('../views/about.vue')
   },
   {
-    path: '/brandMarketing',
-    component: () => import('../views/brandMarketing.vue')
+    path: '/winnowPlanning',
+    component: () => import('../views/winnowPlanning.vue')
+  },
+  {
+    path: '/winnowPlanning/detail',
+    component: () => import('../views/detailPlanning.vue')
+  },
+  {
+    path: '/winnowMarketing',
+    component: () => import('../views/winnowMarketing.vue')
+  },
+  {
+    path: '/winnowMarketing/detail',
+    component: () => import('../views/detailMarketing.vue')
+  },
+  {
+    path: '/winnowDesign',
+    component: () => import('../views/winnowDesign.vue')
+  },
+  {
+    path: '/winnowDesign/detail',
+    component: () => import('../views/detailDesign.vue')
   },
 ]
 
@@ -30,5 +51,6 @@ const router = new VueRouter({
       return {x : 0, y: 0}
     }
 })
+console.log(process.env.BASE_URL);
 
 export default router

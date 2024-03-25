@@ -4,7 +4,7 @@
     class="footer"
     :style="{
       'background-image':
-        'url(' + require('@/assets/images/footer-bg.png') + ')',
+        'url(' + require('@/assets/images/common/footer.jpg') + ')',
     }"
   >
     <div class="container">
@@ -13,15 +13,15 @@
           <div class="mb-4">
             <router-link to="/"
               ><img
-                src="@/assets/images/logo.png"
+                src="@/assets/images/logo/logo8.png"
                 alt=""
                 class=""
-                height="30"
+                height="100"
             /></router-link>
             <p class="text-white-50 my-4">
               저희 빵스컴퍼니(BANG's Company)는 네이버 인플루언서가<br>
               직접 운영하여 믿음 가는 태도로 필요한 것들을 만들어내는<br>
-              온라인 통합 마케팅 회사입니다.
+              통합 마케팅 회사입니다.
             </p>
           </div>
         </div>
@@ -30,27 +30,21 @@
         <div class="col-lg-6 ms-lg-auto">
           <div class="row">
 
-            <div class="col-lg-3" @click="move('/brandMarketing')">
+            <div class="col-lg-3" @click="move('/winnowPlanning')">
               <div class="mt-4 mt-lg-0">
-                <h4 class="text-white font-size-18 mb-3">브랜드 마케팅</h4>
+                <h4 class="text-white font-size-18 mb-3">위노우 기획</h4>
               </div>
             </div>
 
-            <div class="col-lg-3" @click="move('/offlineMarketing')">
+            <div class="col-lg-3" @click="move('/winnowMarketing')">
               <div class="mt-4 mt-lg-0">
-                <h4 class="text-white font-size-18 mb-3">오프라인 마케팅</h4>
+                <h4 class="text-white font-size-18 mb-3">위노우 마케팅</h4>
               </div>
             </div>
 
-            <div class="col-lg-3" @click="move('/onlineMarketing')">
+            <div class="col-lg-3" @click="move('/winnowDesign')">
               <div class="mt-4 mt-lg-0">
-                <h4 class="text-white font-size-18 mb-3">온라인 마케팅</h4>
-              </div>
-            </div>
-
-            <div class="col-lg-3" @click="move('/')" v-scroll-to="'#example'">
-              <div class="mt-4 mt-lg-0">
-                <h4 class="text-white font-size-18 mb-3">사례</h4>
+                <h4 class="text-white font-size-18 mb-3">위노우 디자인</h4>
               </div>
             </div>
 
@@ -86,7 +80,18 @@ export default {
   methods: {
     move(to) {
       this.$router.push(to);
+      // window.location.href = to
     }
   }
 };
 </script>
+<style lang="scss" scoped>
+.footer {
+  background-size: cover;
+  background-position-y: -240px;
+}
+
+.text-white-50 {
+  color: white !important;
+}
+</style>

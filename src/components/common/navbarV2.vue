@@ -1,14 +1,13 @@
 <template>
   <!--Navbar Start-->
   <nav class="navbar navbar-expand-lg fixed-top" id="navbar" :class="{'navbar-light': navcolor === 'light', 'navbar-light bg-white' : navcolor === 'light-white'}">
-    <div class="container">
       <!-- LOGO -->
       <router-link class="navbar-brand logo" to="/">
         <img
-          src="@/assets/images/logo.png"
+          src="@/assets/images/logo/logo5.png"
           alt=""
           class="logo-light"
-          height="28"
+          height="32"
         />
       </router-link>
       <button
@@ -27,52 +26,34 @@
         <ul
           class="navbar-nav ms-auto navbar-center"
           id="navbar-navlist"
-          v-scroll-spy-active="{
-            selector: 'li a.nav-link',
-            class: 'active',
-          }"
         >
-          <li class="list-inline-item" @click="move('/')">
-            <b-nav-item-dropdown text="Home" toggle-class="nav-link-custom" >
-              <ul>
-                <li>
-                  <a href="javascript: void(0);" class="dropItem nav-link" v-scroll-to="'#business'">Business</a>
-                </li>
-                <li class="mt-2">
-                  <a href="javascript: void(0);" class="dropItem nav-link" v-scroll-to="'#interview'">Interview</a>
-                </li>
-                <li class="mt-2">
-                  <a href="javascript: void(0);" class="dropItem nav-link" v-scroll-to="'#strongPoint'">Strong Point</a>
-                </li>
-                <li class="mt-2">
-                  <a href="javascript: void(0);" class="dropItem nav-link" v-scroll-to="'#example'">Example</a>
-                </li>
-                <li class="mt-2">
-                  <a href="javascript: void(0);" class="dropItem nav-link" v-scroll-to="'#partners'">Partners</a>
-                </li>
-              </ul>
-            </b-nav-item-dropdown>
+          <!-- ## HOME -->
+          <li class="nav-item">
+            <router-link to="/home" class="nav-link">HOME</router-link>
           </li>
 
+          <!-- ## ABOUT -->
           <li class="nav-item">
-            <router-link to="/brandMarketing" class="nav-link">Brand Marketing</router-link>
+            <router-link to="/about" class="nav-link">ABOUT</router-link>
           </li>
 
+          <!-- ## 위노우 기획 -->
           <li class="nav-item">
-            <router-link to="/offlineMarketing" class="nav-link">Offline Marketing</router-link>
+            <router-link to="/winnowPlanning" class="nav-link">위노우 기획</router-link>
+          </li>
+          
+          <!-- ## 위노우 마케팅 -->
+          <li class="nav-item">
+            <router-link to="/winnowMarketing" class="nav-link">위노우 마케팅</router-link>
           </li>
 
+          <!-- ## 위노우 디자인 -->
           <li class="nav-item">
-            <router-link to="/onlineMarketing" class="nav-link">Online Marketing</router-link>
-          </li>
-
-          <li class="nav-item">
-            <a href="/#contact" class="nav-link">Contact</a>
+            <router-link to="/winnowDesign" class="nav-link">위노우 디자인</router-link>
           </li>
 
         </ul>
       </div>
-    </div>
     <!-- end container -->
   </nav>
   <!-- Navbar End -->
@@ -89,9 +70,10 @@ export default {
   },
   components: { MenuIcon },
   data() {
-    return {};
+    return {
+    };
   },
-  mounted: () => {
+  mounted() {
     window.onscroll = function () {
       onwindowScroll();
     };
@@ -123,7 +105,7 @@ export default {
 </script>
 
 
-<style scoped>
+<style lang="scss" scoped>
 ul {
   padding: 5px;
 }
@@ -133,4 +115,14 @@ li {
 .dropItem {
   color: gray !important;
 }
+.navbar {
+  background-color: #c19a444a;
+  padding-left: 30px;
+  padding-right: 30px;
+  
+}
+.router-link-active {
+  color: #0d6efdd9 !important;
+}
+
 </style>

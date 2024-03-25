@@ -27,10 +27,10 @@ Vue.use(Scrollspy);
 
 
 // 전역 컴포넌트
-import navbar from '@/components/common/navbar.vue'
-import footer from '@/components/common/footer.vue'
-Vue.component('Navbar', navbar);
-Vue.component('Footer', footer);
+import navbarV2 from '@/components/common/navbarV2.vue'
+import footerV2 from '@/components/common/footerV2.vue'
+Vue.component('NavbarV2', navbarV2);
+Vue.component('Footer', footerV2);
 
 
 new Vue({
